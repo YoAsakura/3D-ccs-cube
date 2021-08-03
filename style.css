@@ -1,0 +1,95 @@
+.card-body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: burlywood;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-pers {
+    -webkit-perspective:1600px;
+    -webkit-perspective-origin: 50% 240px;
+    -webkit-transform-style: preserve-3d;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    animation: rotate 10s ease-in-out infinite;
+}
+
+    .card-front {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 300px;
+        width: 300px;
+        transform: rotateY(0deg) translateZ(150px);
+        background-color: rgba(255, 255, 255, 0.5);
+        animation: crd 3s ease-in-out infinite;
+        z-index: 10;
+        -webkit-transform-origin: 50% 50% 0;
+    }
+    .card-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 300px;
+        width: 300px;
+        transform: rotateY(0deg) translateZ(-150px);
+        background-color: rgba(0, 0, 0, 0.5);
+        -webkit-transform-origin: 50% 50% 0;
+    }
+
+    .card-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 300px;
+        width: 300px;
+        transform: rotateY(90deg) rotateX(0deg) translateZ(-150px);
+        background-color: rgba(49, 35, 175, 1);
+        -webkit-transform-origin: 50% 50% 0;
+    }
+    .card-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 300px;
+        width: 300px;
+        transform: rotateY(-90deg) rotateX(0deg) translateZ(-150px);
+        background-color: rgba(219, 48, 48, 1);
+        -webkit-transform-origin: 50% 50% 0;
+    }
+
+    .card-top {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 300px;
+        width: 300px;
+        transform: rotateY(0deg) rotateX(-90deg) translateZ(-150px);
+        background-color: rgba(72, 230, 80, 1);
+        -webkit-transform-origin: 50% 50% 0;
+    }
+      
+    .card-bottom {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 300px;
+        width: 300px;
+        transform: rotateY(0deg) rotateX(90deg) translateZ(-150px);
+        background-color: rgba(173, 76, 141, 1);
+        -webkit-transform-origin: 50% 50% 0;
+    }
+
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotateY(0); }
+    100% { -webkit-transform: rotateY(360deg); }
+  }
